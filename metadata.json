@@ -1,0 +1,6 @@
+{
+  "name": "Nafees Paints - Quality Paints & Painting Solutions in Banswara",
+  "description": "Premium paint store and house-painting services in Banswara, Rajasthan. Authorized dealer of Asian Paints & Nerolac and Birla Opus franchise store.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
