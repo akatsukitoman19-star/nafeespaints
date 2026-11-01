@@ -92,13 +92,13 @@ export const ProductCategories: React.FC = () => {
         </div>
 
         {/* Disclaimer / Stock note */}
-        <div className="mt-12 p-6 bg-white border border-[#17191B]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <p className="text-xs text-[#303438]">
+        <div className="mt-8 sm:mt-12 p-4 sm:p-6 bg-white border border-[#17191B]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 max-w-full">
+          <p className="text-xs text-[#303438] break-words">
             <strong className="text-[#17191B]">In-Store Guidance:</strong> Category suggestions shown. Exact shade swatches, computerized tinting, can sizes (1L, 4L, 10L, 20L), and manufacturer warranties available at our store.
           </p>
           <a
             href={BUSINESS_INFO.phoneTel}
-            className="text-xs font-semibold uppercase tracking-wider text-[#17191B] hover:underline whitespace-nowrap"
+            className="text-xs font-semibold uppercase tracking-wider text-[#17191B] hover:underline sm:whitespace-nowrap shrink-0 inline-block"
           >
             Call {BUSINESS_INFO.phoneDisplay} →
           </a>

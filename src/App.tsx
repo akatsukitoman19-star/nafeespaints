@@ -15,12 +15,12 @@ import { MobileQuickBar } from './components/MobileQuickBar.tsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F4F4F2] text-[#17191B] flex flex-col font-sans selection:bg-[#303438] selection:text-white">
+    <div className="min-h-screen bg-[#F4F4F2] text-[#17191B] flex flex-col font-sans selection:bg-[#303438] selection:text-white w-full max-w-full overflow-x-hidden">
       {/* Top Navigation */}
       <Navbar />
 
       {/* Main Content Sections */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {/* 1. Hero Section */}
         <Hero />
 

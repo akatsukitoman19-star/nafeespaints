@@ -32,7 +32,7 @@ export const BrandPartners: React.FC = () => {
             return (
               <div
                 key={brand.id}
-                className="group relative bg-[#F4F4F2] p-8 border border-[#17191B]/10 hover:border-[#17191B] transition-all duration-200 flex flex-col justify-between"
+                className="group relative bg-[#F4F4F2] p-6 sm:p-8 border border-[#17191B]/10 hover:border-[#17191B] transition-all duration-200 flex flex-col justify-between min-w-0 max-w-full"
               >
                 <div>
                   {/* Relationship indicator */}

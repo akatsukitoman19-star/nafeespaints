@@ -52,24 +52,24 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
       {/* Prev / Next controls */}
       <button
         onClick={onPrev}
-        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/80 hover:text-white bg-black/50 hover:bg-black/75 rounded-full transition-all focus:outline-none"
+        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/80 hover:text-white bg-black/60 hover:bg-black/80 rounded-full transition-all focus:outline-none"
         aria-label="Previous Project"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       <button
         onClick={onNext}
-        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/80 hover:text-white bg-black/50 hover:bg-black/75 rounded-full transition-all focus:outline-none"
+        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 text-white/80 hover:text-white bg-black/60 hover:bg-black/80 rounded-full transition-all focus:outline-none"
         aria-label="Next Project"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* Content wrapper */}
       <div className="relative max-w-5xl w-full max-h-[90vh] flex flex-col bg-[#17191B] border border-white/10 text-white overflow-hidden shadow-2xl">
         {/* Full Image */}
-        <div className="relative flex-1 bg-black/80 flex items-center justify-center min-h-[300px] max-h-[68vh] overflow-hidden">
+        <div className="relative flex-1 bg-black/80 flex items-center justify-center min-h-[220px] sm:min-h-[300px] max-h-[68vh] overflow-hidden">
           <img
             src={project.imageUrl}
             alt={project.title}
@@ -79,7 +79,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         </div>
 
         {/* Caption & Actions */}
-        <div className="p-6 bg-[#17191B] border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="p-4 sm:p-6 bg-[#17191B] border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-[#A6A9AD] mb-1">
               <span>{project.categoryLabel}</span>

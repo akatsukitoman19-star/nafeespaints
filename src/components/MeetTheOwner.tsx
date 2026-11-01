@@ -74,22 +74,22 @@ export const MeetTheOwner: React.FC = () => {
             </div>
 
             {/* Direct Connect Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-4 pt-6 border-t border-[#17191B]/10">
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-6 border-t border-[#17191B]/10">
               <a
                 href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-[#17191B] hover:bg-[#303438] transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-[#17191B] hover:bg-[#303438] transition-colors text-center"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-400" />
+                <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>Message on WhatsApp</span>
               </a>
 
               <a
                 href={BUSINESS_INFO.phoneTel}
-                className="inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#17191B] bg-[#F4F4F2] border border-[#17191B]/20 hover:bg-neutral-200 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#17191B] bg-[#F4F4F2] border border-[#17191B]/20 hover:bg-neutral-200 transition-colors text-center"
               >
-                <Phone className="w-4 h-4 text-[#17191B]" />
+                <Phone className="w-4 h-4 text-[#17191B] shrink-0" />
                 <span>Call {BUSINESS_INFO.phoneDisplay}</span>
               </a>
             </div>

@@ -59,12 +59,12 @@ export const ProjectGallery: React.FC = () => {
         </div>
 
         {/* Filter Controls (Interactive Buttons with Clean State) */}
-        <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-white/10">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-8 sm:mb-10 pb-4 border-b border-white/10 max-w-full">
           {filterTabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setSelectedFilter(tab.id)}
-              className={`px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors whitespace-nowrap cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition-colors whitespace-nowrap cursor-pointer ${
                 selectedFilter === tab.id
                   ? 'bg-white text-[#17191B]'
                   : 'bg-transparent text-neutral-300 hover:text-white hover:bg-white/5 border border-white/15'

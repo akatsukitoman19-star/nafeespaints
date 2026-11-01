@@ -37,46 +37,46 @@ export const ColourInspiration: React.FC = () => {
         </div>
 
         {/* Studio Interactive Card */}
-        <div className="bg-white border border-[#17191B]/10 p-6 sm:p-10 shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="bg-white border border-[#17191B]/10 p-4 sm:p-8 lg:p-10 shadow-sm max-w-full overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
             {/* Left Column: Room Visualizer */}
-            <div className="lg:col-span-7 flex flex-col justify-between">
+            <div className="lg:col-span-7 flex flex-col justify-between min-w-0">
               {/* Room view selector tabs */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-1.5 p-1 bg-[#F4F4F2] border border-[#17191B]/10">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                <div className="grid grid-cols-3 gap-1 p-1 bg-[#F4F4F2] border border-[#17191B]/10 w-full sm:w-auto">
                   <button
                     onClick={() => setActiveRoomView('living')}
-                    className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
+                    className={`px-2 sm:px-3 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider transition-colors text-center truncate cursor-pointer ${
                       activeRoomView === 'living'
                         ? 'bg-white text-[#17191B] shadow-xs'
                         : 'text-[#303438] hover:text-[#17191B]'
                     }`}
                   >
-                    Living Room
+                    Living
                   </button>
                   <button
                     onClick={() => setActiveRoomView('bedroom')}
-                    className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
+                    className={`px-2 sm:px-3 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider transition-colors text-center truncate cursor-pointer ${
                       activeRoomView === 'bedroom'
                         ? 'bg-white text-[#17191B] shadow-xs'
                         : 'text-[#303438] hover:text-[#17191B]'
                     }`}
                   >
-                    Master Suite
+                    Bedroom
                   </button>
                   <button
                     onClick={() => setActiveRoomView('facade')}
-                    className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
+                    className={`px-2 sm:px-3 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider transition-colors text-center truncate cursor-pointer ${
                       activeRoomView === 'facade'
                         ? 'bg-white text-[#17191B] shadow-xs'
                         : 'text-[#303438] hover:text-[#17191B]'
                     }`}
                   >
-                    Exterior Facade
+                    Facade
                   </button>
                 </div>
 
-                <span className="text-[11px] text-[#A6A9AD] hidden sm:inline-block">
+                <span className="text-[10px] sm:text-[11px] text-[#A6A9AD]">
                   Interactive Room Preview
                 </span>
               </div>
@@ -107,16 +107,16 @@ export const ColourInspiration: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
 
                 {/* Bottom Canvas Tag */}
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs">
-                  <div className="flex items-center gap-2">
+                <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4 flex flex-wrap items-center justify-between gap-1.5 text-white text-xs">
+                  <div className="flex items-center gap-1.5 min-w-0">
                     <span
-                      className="w-4 h-4 border border-white/50 shrink-0"
+                      className="w-3.5 h-3.5 border border-white/50 shrink-0"
                       style={{ backgroundColor: activeSwatch.hex }}
                     />
-                    <span className="font-semibold tracking-wide">{activeSwatch.name}</span>
-                    <span className="text-white/60 font-mono text-[11px]">({activeSwatch.hex})</span>
+                    <span className="font-semibold tracking-wide text-[11px] sm:text-xs truncate">{activeSwatch.name}</span>
+                    <span className="text-white/60 font-mono text-[10px] hidden xs:inline">({activeSwatch.hex})</span>
                   </div>
-                  <span className="text-[10px] tracking-widest uppercase bg-black/60 px-2 py-0.5 border border-white/20">
+                  <span className="text-[9px] sm:text-[10px] tracking-widest uppercase bg-black/60 px-1.5 py-0.5 border border-white/20 shrink-0">
                     {activeSwatch.finish} Finish
                   </span>
                 </div>
@@ -129,7 +129,7 @@ export const ColourInspiration: React.FC = () => {
             </div>
 
             {/* Right Column: Swatches & Details */}
-            <div className="lg:col-span-5 flex flex-col justify-between">
+            <div className="lg:col-span-5 flex flex-col justify-between min-w-0">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-semibold uppercase tracking-wider text-[#303438]">
@@ -141,14 +141,14 @@ export const ColourInspiration: React.FC = () => {
                 </div>
 
                 {/* Swatch Palette Grid */}
-                <div className="grid grid-cols-4 sm:grid-cols-4 gap-3 mb-8">
+                <div className="grid grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
                   {INSPIRATION_SWATCHES.map((swatch) => {
                     const isSelected = activeSwatch.hex === swatch.hex;
                     return (
                       <button
                         key={swatch.hex}
                         onClick={() => setActiveSwatch(swatch)}
-                        className={`group relative flex flex-col items-center p-2 border transition-all text-left ${
+                        className={`group relative flex flex-col items-center p-1.5 sm:p-2 border transition-all text-left min-w-0 ${
                           isSelected
                             ? 'border-[#17191B] bg-[#F4F4F2] ring-1 ring-[#17191B]'
                             : 'border-[#17191B]/10 hover:border-[#17191B]/40 bg-white'

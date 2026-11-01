@@ -46,7 +46,7 @@ export const StoreVisit: React.FC = () => {
           </div>
 
           {/* Location & Directions Info */}
-          <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between">
+          <div className="lg:col-span-5 p-5 sm:p-8 lg:p-10 flex flex-col justify-between min-w-0">
             <div className="space-y-6">
               {/* Business Name */}
               <div>
@@ -99,23 +99,23 @@ export const StoreVisit: React.FC = () => {
                 <ExternalLink className="w-3.5 h-3.5 ml-1 opacity-70" />
               </a>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 <a
                   href={BUSINESS_INFO.phoneTel}
-                  className="inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold uppercase tracking-wider text-[#17191B] bg-[#F4F4F2] hover:bg-neutral-200 border border-[#17191B]/15 transition-colors"
+                  className="inline-flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 px-2 sm:px-4 text-xs font-semibold uppercase tracking-wider text-[#17191B] bg-[#F4F4F2] hover:bg-neutral-200 border border-[#17191B]/15 transition-colors truncate"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#17191B]" />
-                  <span>Call Store</span>
+                  <Phone className="w-3.5 h-3.5 text-[#17191B] shrink-0" />
+                  <span className="truncate">Call Store</span>
                 </a>
 
                 <a
                   href={BUSINESS_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold uppercase tracking-wider text-[#17191B] bg-[#F4F4F2] hover:bg-neutral-200 border border-[#17191B]/15 transition-colors"
+                  className="inline-flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 px-2 sm:px-4 text-xs font-semibold uppercase tracking-wider text-[#17191B] bg-[#F4F4F2] hover:bg-neutral-200 border border-[#17191B]/15 transition-colors truncate"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>WhatsApp</span>
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span className="truncate">WhatsApp</span>
                 </a>
               </div>
             </div>

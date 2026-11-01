@@ -46,12 +46,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
             : 'bg-white border-b border-[#17191B]/10'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-8 h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="flex items-center justify-between gap-2 sm:gap-8 h-18 sm:h-20 w-full">
             {/* Zone 1: Brand wordmark / logo */}
             <a
               href="#top"
-              className="flex items-center shrink-0 hover:opacity-95 transition-opacity"
+              className="flex items-center shrink-0 min-w-0 hover:opacity-95 transition-opacity"
               aria-label="Nafees Paints Home"
             >
               <Logo size="md" />

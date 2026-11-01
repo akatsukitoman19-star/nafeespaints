@@ -42,7 +42,7 @@ export const PaintingServices: React.FC = () => {
             return (
               <div
                 key={service.id}
-                className="group relative p-8 bg-[#F4F4F2] border border-[#17191B]/10 hover:border-[#17191B] transition-all duration-300 flex flex-col justify-between"
+                className="group relative p-6 sm:p-8 bg-[#F4F4F2] border border-[#17191B]/10 hover:border-[#17191B] transition-all duration-300 flex flex-col justify-between max-w-full min-w-0"
               >
                 <div>
                   {/* Top row: Icon & Index */}

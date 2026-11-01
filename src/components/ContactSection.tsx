@@ -96,68 +96,68 @@ export const ContactSection: React.FC = () => {
                 href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between p-5 bg-[#303438] border border-white/10 hover:border-emerald-400/50 hover:bg-[#383d42] transition-all group"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 bg-[#303438] border border-white/10 hover:border-emerald-400/50 hover:bg-[#383d42] transition-all group min-w-0 gap-2"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                    <MessageCircle className="w-5 h-5" />
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#A6A9AD] block">
-                      WhatsApp / WhatsApp Call
+                  <div className="min-w-0">
+                    <span className="text-[10px] uppercase tracking-wider text-[#A6A9AD] block truncate">
+                      WhatsApp / Call
                     </span>
-                    <span className="text-base font-semibold text-white">
+                    <span className="text-sm sm:text-base font-semibold text-white truncate block">
                       {BUSINESS_INFO.whatsappDisplay}
                     </span>
                   </div>
                 </div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-emerald-400 group-hover:translate-x-1 transition-transform">
-                  Chat Now →
+                <span className="text-xs uppercase tracking-wider font-semibold text-emerald-400 group-hover:translate-x-1 transition-transform shrink-0 whitespace-nowrap">
+                  Chat →
                 </span>
               </a>
 
               {/* Call Now Button */}
               <a
                 href={BUSINESS_INFO.phoneTel}
-                className="w-full flex items-center justify-between p-5 bg-[#303438] border border-white/10 hover:border-white/40 hover:bg-[#383d42] transition-all group"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 bg-[#303438] border border-white/10 hover:border-white/40 hover:bg-[#383d42] transition-all group min-w-0 gap-2"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-white/10 text-white flex items-center justify-center">
-                    <Phone className="w-5 h-5" />
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 text-white flex items-center justify-center shrink-0">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#A6A9AD] block">
+                  <div className="min-w-0">
+                    <span className="text-[10px] uppercase tracking-wider text-[#A6A9AD] block truncate">
                       Store Telephone
                     </span>
-                    <span className="text-base font-semibold text-white">
+                    <span className="text-sm sm:text-base font-semibold text-white truncate block">
                       {BUSINESS_INFO.phoneDisplay}
                     </span>
                   </div>
                 </div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-white group-hover:translate-x-1 transition-transform">
-                  Call Now →
+                <span className="text-xs uppercase tracking-wider font-semibold text-white group-hover:translate-x-1 transition-transform shrink-0 whitespace-nowrap">
+                  Call →
                 </span>
               </a>
 
               {/* Email Button */}
               <a
                 href={`mailto:${BUSINESS_INFO.email}`}
-                className="w-full flex items-center justify-between p-5 bg-[#303438] border border-white/10 hover:border-white/40 hover:bg-[#383d42] transition-all group"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 bg-[#303438] border border-white/10 hover:border-white/40 hover:bg-[#383d42] transition-all group min-w-0 gap-2"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-white/10 text-white flex items-center justify-center">
-                    <Mail className="w-5 h-5" />
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 text-white flex items-center justify-center shrink-0">
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div className="truncate">
-                    <span className="text-[10px] uppercase tracking-wider text-[#A6A9AD] block">
+                  <div className="min-w-0 truncate">
+                    <span className="text-[10px] uppercase tracking-wider text-[#A6A9AD] block truncate">
                       Official Email
                     </span>
-                    <span className="text-sm font-semibold text-white truncate block">
+                    <span className="text-xs sm:text-sm font-semibold text-white truncate block">
                       {BUSINESS_INFO.email}
                     </span>
                   </div>
                 </div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-white group-hover:translate-x-1 transition-transform">
+                <span className="text-xs uppercase tracking-wider font-semibold text-white group-hover:translate-x-1 transition-transform shrink-0 whitespace-nowrap">
                   Email →
                 </span>
               </a>
@@ -167,23 +167,23 @@ export const ContactSection: React.FC = () => {
                 href={BUSINESS_INFO.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between p-5 bg-[#303438] border border-white/10 hover:border-amber-300/50 hover:bg-[#383d42] transition-all group"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 bg-[#303438] border border-white/10 hover:border-amber-300/50 hover:bg-[#383d42] transition-all group min-w-0 gap-2"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-amber-400/20 text-amber-300 flex items-center justify-center">
-                    <Navigation className="w-5 h-5" />
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-amber-400/20 text-amber-300 flex items-center justify-center shrink-0">
+                    <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#A6A9AD] block">
+                  <div className="min-w-0">
+                    <span className="text-[10px] uppercase tracking-wider text-[#A6A9AD] block truncate">
                       Location
                     </span>
-                    <span className="text-xs font-semibold text-white block max-w-xs truncate">
+                    <span className="text-xs font-semibold text-white block truncate">
                       {BUSINESS_INFO.address}
                     </span>
                   </div>
                 </div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-amber-300 group-hover:translate-x-1 transition-transform">
-                  Directions →
+                <span className="text-xs uppercase tracking-wider font-semibold text-amber-300 group-hover:translate-x-1 transition-transform shrink-0 whitespace-nowrap">
+                  Map →
                 </span>
               </a>
             </div>
@@ -196,8 +196,8 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Right Column: Honest WhatsApp Connected Enquiry Form */}
-          <div className="lg:col-span-7 bg-[#303438] p-8 sm:p-10 border border-white/15">
-            <div className="mb-8">
+          <div className="lg:col-span-7 bg-[#303438] p-5 sm:p-8 lg:p-10 border border-white/15 max-w-full">
+            <div className="mb-6 sm:mb-8">
               <h3 className="text-2xl font-bold tracking-tight text-white mb-2">
                 Send a Direct Project Enquiry
               </h3>

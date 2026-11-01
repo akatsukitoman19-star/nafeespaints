@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
               Authorized dealer of Asian Paints & Nerolac and official Birla Opus franchise store in Banswara, Rajasthan. Providing genuine quality paints, computerized tinting, and end-to-end painting solutions.
             </p>
 
-            <div className="pt-2 flex items-center gap-4">
+            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
                   href={BUSINESS_INFO.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors leading-relaxed"
+                  className="hover:text-white transition-colors leading-relaxed break-words"
                 >
                   {BUSINESS_INFO.address}
                 </a>
@@ -116,10 +116,10 @@ export const Footer: React.FC = () => {
                 </a>
               </div>
 
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0">
                 <Mail className="w-4 h-4 text-white/80 shrink-0" />
-                <span>Email: </span>
-                <a href={`mailto:${BUSINESS_INFO.email}`} className="text-white hover:underline">
+                <span className="shrink-0">Email: </span>
+                <a href={`mailto:${BUSINESS_INFO.email}`} className="text-white hover:underline truncate">
                   {BUSINESS_INFO.email}
                 </a>
               </div>
@@ -127,16 +127,16 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        {/* Bottom Bar: Responsive flex wrapping */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 text-center sm:text-left w-full">
           <p>© {new Date().getFullYear()} Nafees Paints. All rights reserved. Banswara, Rajasthan.</p>
-          <div className="flex items-center gap-6">
-            <span className="text-[11px] text-neutral-400">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-center sm:text-left">
+            <span className="text-[11px] text-neutral-400 break-words">
               Authorized Dealer: Asian Paints & Nerolac · Birla Opus Franchise
             </span>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 text-neutral-300 hover:text-white transition-colors"
+              className="inline-flex items-center gap-1.5 text-neutral-300 hover:text-white transition-colors cursor-pointer shrink-0"
               aria-label="Scroll to top of page"
             >
               <span>Back to Top</span>

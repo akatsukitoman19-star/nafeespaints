@@ -11,17 +11,17 @@ export const Logo: React.FC<LogoProps> = ({ className = '', inverted = false, si
   const subColor = inverted ? 'text-[#A6A9AD]' : 'text-[#303438]';
 
   const sizeClasses = {
-    sm: 'text-base',
-    md: 'text-xl',
-    lg: 'text-2xl',
+    sm: 'text-sm sm:text-base',
+    md: 'text-base sm:text-xl',
+    lg: 'text-xl sm:text-2xl',
   };
 
   return (
-    <div className={`flex items-center gap-3 select-none ${className}`}>
+    <div className={`flex items-center gap-2.5 sm:gap-3 select-none min-w-0 ${className}`}>
       {/* Brand Emblem / Official Logo */}
       <div
         className={`relative flex items-center justify-center shrink-0 overflow-hidden rounded-full transition-transform duration-200 ${
-          size === 'sm' ? 'w-8 h-8' : size === 'lg' ? 'w-14 h-14' : 'w-11 h-11'
+          size === 'sm' ? 'w-7 h-7 sm:w-8 sm:h-8' : size === 'lg' ? 'w-12 h-12 sm:w-14 sm:h-14' : 'w-9 h-9 sm:w-11 sm:h-11'
         } ${inverted ? 'bg-white p-0.5 ring-1 ring-white/20' : 'bg-white border border-[#17191B]/15'}`}
       >
         <img
